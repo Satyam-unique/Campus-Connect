@@ -1,0 +1,150 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.stats-grid {
+  margin-bottom: 1rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.stat-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-info h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.stat-info p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  font-size: 1.2rem;
+}
+
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.recent-notices, .upcoming-classes {
+  padding: 1.5rem;
+}
+
+.notice-list, .class-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notice-item {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.notice-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.notice-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.danger-bg { background-color: var(--danger); }
+.success-bg { background-color: var(--success); }
+
+.notice-content h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.notice-content p {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.notice-time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.class-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease;
+}
+
+.class-item:hover {
+  transform: translateX(4px);
+}
+
+.class-item.active {
+  border-left: 4px solid var(--accent-primary);
+}
+
+.class-time {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  min-width: 70px;
+}
+
+.class-details h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.class-details p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
